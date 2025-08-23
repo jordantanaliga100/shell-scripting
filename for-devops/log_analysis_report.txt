@@ -3,15 +3,15 @@ analyzing logs files
 
 List of log files updated in last 24 hours...
 ====================
-/home/jordantanaliga100/Personal/shell-scripting/logs/system.log
-/home/jordantanaliga100/Personal/shell-scripting/logs/application.log
+/home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log
+/home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log
 
 
 =====================================
-==============/home/jordantanaliga100/Personal/shell-scripting/logs/system.log==============
+============== /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log ==============
 =====================================
 
-Searching ERROR logs in /home/jordantanaliga100/Personal/shell-scripting/logs/system.log file
+Searching ERROR logs in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log file
 Jun  1 01:20:18 server-prod-01 sshd[23954]: [ERROR] Failed password for root from 198.51.100.23 port 63122 ssh2
 Jun  1 01:20:19 server-prod-01 sshd[23954]: [ERROR] Failed password for root from 198.51.100.23 port 63122 ssh2
 Jun  1 01:20:20 server-prod-01 sshd[23954]: [ERROR] Failed password for root from 198.51.100.23 port 63122 ssh2
@@ -26,32 +26,38 @@ Jun  1 04:40:12 server-prod-01 kernel: [59412.345678] [ERROR] Memory failure: 0x
 Jun  1 04:40:13 server-prod-01 kernel: [59413.456789] [ERROR] EDAC MC0: 1 CE memory read error on CPU_SrcID#0_MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x0 offset:0x0 grain:8 syndrome:0x0 - area:DRAM err_code:0001:0091 socket:0 channel_mask:1)
 Jun  1 04:40:16 server-prod-01 kernel: [59416.789012] [ERROR] EDAC MC0: 1 CE memory read error on CPU_SrcID#0_MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x0 offset:0x0 grain:8 syndrome:0x0 - area:DRAM err_code:0001:0091 socket:0 channel_mask:1)
 
-Number of ERROR logs found in /home/jordantanaliga100/Personal/shell-scripting/logs/system.log
+Number of ERROR logs found in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log
 13
 
-Searching FATAL logs in /home/jordantanaliga100/Personal/shell-scripting/logs/system.log file
+⚠️ Action Required: too many ERROR issues in log file /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log
+
+Searching FATAL logs in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log file
 Jun  1 01:45:01 server-prod-01 kernel: [49411.123456] [FATAL] EXT4-fs error (device sda1): ext4_journal_check_start:56: Detected aborted journal
 Jun  1 01:45:02 server-prod-01 kernel: [49412.234567] [FATAL] EXT4-fs (sda1): Remounting filesystem read-only
 
-Number of FATAL logs found in /home/jordantanaliga100/Personal/shell-scripting/logs/system.log
+Number of FATAL logs found in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log
 2
 
-Searching CRITICAL logs in /home/jordantanaliga100/Personal/shell-scripting/logs/system.log file
+⚠️ Action Required: too many FATAL issues in log file /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log
+
+Searching CRITICAL logs in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log file
 Jun  1 01:20:21 server-prod-01 sshd[23954]: [CRITICAL] Disconnecting: Too many authentication failures for root from 198.51.100.23 port 63122 ssh2 [preauth]
 Jun  1 01:45:06 server-prod-01 smartd[1234]: [CRITICAL] Device: /dev/sda [SAT], failed SMART usage Attribute: Reallocated_Sector_Ct.
 Jun  1 03:46:01 server-prod-01 smartd[1234]: [CRITICAL] Device: /dev/sdc [SAT], failed SMART usage Attribute: Raw_Read_Error_Rate.
 Jun  1 04:40:14 server-prod-01 kernel: [59414.567890] [CRITICAL] Hardware event. This is not a software error.
 Jun  1 04:40:15 server-prod-01 kernel: [59415.678901] [CRITICAL] MCE: [Hardware Error]: CPU 0: Machine Check: 0 Bank 6: ee00000000800400
 
-Number of CRITICAL logs found in /home/jordantanaliga100/Personal/shell-scripting/logs/system.log
+Number of CRITICAL logs found in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log
 5
 
+⚠️ Action Required: too many CRITICAL issues in log file /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/system.log
+
 
 =====================================
-==============/home/jordantanaliga100/Personal/shell-scripting/logs/application.log==============
+============== /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log ==============
 =====================================
 
-Searching ERROR logs in /home/jordantanaliga100/Personal/shell-scripting/logs/application.log file
+Searching ERROR logs in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log file
 [2025-06-01 08:17:48] [ERROR] Payment gateway timeout after 30s for transaction TX78901234
 [2025-06-01 08:25:48] [ERROR] Insufficient disk space for file upload
 [2025-06-01 08:41:33] [ERROR] Invalid product code: PRD-404-NOTFOUND
@@ -59,19 +65,25 @@ Searching ERROR logs in /home/jordantanaliga100/Personal/shell-scripting/logs/ap
 [2025-06-01 09:12:17] [ERROR] Analytics processing failed - Missing data for region EU-WEST
 [2025-06-01 09:30:45] [ERROR] Health check failed for service: message-queue
 
-Number of ERROR logs found in /home/jordantanaliga100/Personal/shell-scripting/logs/application.log
+Number of ERROR logs found in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log
 6
 
-Searching FATAL logs in /home/jordantanaliga100/Personal/shell-scripting/logs/application.log file
+⚠️ Action Required: too many ERROR issues in log file /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log
+
+Searching FATAL logs in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log file
 [2025-06-01 08:47:22] [FATAL] Out of memory error in recommendation engine
 [2025-06-01 09:25:33] [FATAL] Kernel panic on worker node worker-03
 
-Number of FATAL logs found in /home/jordantanaliga100/Personal/shell-scripting/logs/application.log
+Number of FATAL logs found in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log
 2
 
-Searching CRITICAL logs in /home/jordantanaliga100/Personal/shell-scripting/logs/application.log file
+⚠️ Action Required: too many FATAL issues in log file /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log
+
+Searching CRITICAL logs in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log file
 [2025-06-01 08:32:13] [CRITICAL] Database connection lost during backup
 [2025-06-01 09:17:22] [CRITICAL] Security alert: Multiple failed login attempts for admin account
 
-Number of CRITICAL logs found in /home/jordantanaliga100/Personal/shell-scripting/logs/application.log
+Number of CRITICAL logs found in /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log
 2
+
+⚠️ Action Required: too many CRITICAL issues in log file /home/jordantanaliga100/Personal/shell-scripting/for-devops/logs/application.log
