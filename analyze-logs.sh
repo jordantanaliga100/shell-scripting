@@ -7,20 +7,21 @@
 LOG_DIR="/home/jordantanaliga100/Personal/shell-scripting/logs"
 APP_LOG_FILE="application.log"
 SYS_LOG_FILE="system.log"
+REPORT_FILE="/home/jordantanaliga100/Personal/shell-scripting/log_analysis_report.txt"
 
 # ARRAY VARIABLE
 ERROR_PATTERNS=("ERROR" "FATAL" "CRITICAL")
 
 # Scripts
-echo "analyzing logs files"
-echo "===================="
+echo "analyzing logs files" > "$REPORT_FILE"
+echo "====================" >> "$REPORT_FILE"
 
-echo -e "\nList of log files updated in last 24 hours..."
-echo "===================="
+echo -e "\nList of log files updated in last 24 hours..." >> "$REPORT_FILE"
+echo "====================" >> "$REPORT_FILE"
 
 # returns all the log files that has been modified in the last 24 hours...
 LOG_FILES=$(find $LOG_DIR -name "*.log" -mtime -1)
-echo "$LOG_FILES"
+echo "$LOG_FILES" >> "$REPORT_FILE"
 
 # echo -e "\nsearching "ERROR" logs in application.log file"
 # grep "${ERROR_PATTERNS[0]}" $LOG_DIR/$APP_LOG_FILE
@@ -42,16 +43,18 @@ echo "$LOG_FILES"
 
 # loops here...
 for LOG_FILE in $LOG_FILES; do
-  echo -e "\n"
-  echo "====================================="
-  echo "==============$LOG_FILE=============="
-  echo "====================================="
+  echo -e "\n" >> "$REPORT_FILE"
+  echo "=====================================" >> "$REPORT_FILE"
+  echo "==============$LOG_FILE==============" >> "$REPORT_FILE"
+  echo "=====================================" >> "$REPORT_FILE"
   
   for PATTERN in ${ERROR_PATTERNS[@]}; do
-    echo -e "\nSearching $PATTERN logs in "$LOG_FILE" file"
-    grep "$PATTERN" "$LOG_FILE"
+    echo -e "\nSearching $PATTERN logs in "$LOG_FILE" file" >> "$REPORT_FILE"
+    grep "$PATTERN" "$LOG_FILE" >> "$REPORT_FILE"
 
-    echo -e "\nNumber of "$PATTERN" logs found in "$LOG_FILE""
-    grep -c "$PATTERN" "$LOG_FILE"
+    echo -e "\nNumber of "$PATTERN" logs found in "$LOG_FILE"" >> "$REPORT_FILE"
+    grep -c "$PATTERN" "$LOG_FILE" >> "$REPORT_FILE"
   done
 done
+
+echo -e "\n...Log analysis completed and report saved in : $REPORT_FILE"
